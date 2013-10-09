@@ -1,0 +1,15 @@
+<h1>Advanced Search</h1>
+
+<%= form_for @search do |f| %>
+    <div class="field">
+      <%= f.label :student_card_number %><br />
+      <%= f.text_field :student_card_number %>
+    </div>
+    <div class="field">
+      <%= f.label :semester_number %><br />
+      <%= f.collection_select :semester_number, Semester.all, :id, :semester_no, :include_blank => true %>
+    </div>
+
+    <div class="actions"><%= f.submit "Submit" %></div>
+<% end %>
+

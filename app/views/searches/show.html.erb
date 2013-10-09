@@ -1,0 +1,32 @@
+<h1>Search Results</h1>
+
+<% if @search.registrations.blank? %>
+    <p style="font-family:arial;color:red;font-size:20px;"><br><%= "No Such Record Found" %></p>
+<% else %>
+    <table border="1">
+      <thead>
+      <tr>
+        <th>Student id card</th>
+        <th>Semester no</th>
+        <th>Subject name</th>
+      </tr>
+      </thead>
+
+      <tbody>
+
+      <% @search.registrations.each do |registration| %>
+          <tr>
+            <td><%= registration.student_id_card %></td>
+            <td><%= registration.semester_no %></td>
+            <td><%= registration.subject_name %></td>
+          </tr>
+      <% end %>
+<% end %>
+</tbody>
+</table>
+
+
+<br>
+
+<%= link_to 'Back', registrations_path %>
+

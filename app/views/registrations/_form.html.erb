@@ -1,0 +1,50 @@
+<%= form_for(@registration) do |f| %>
+    <% if @registration.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@registration.errors.count, "error") %> prohibited this registration from being saved:</h2>
+
+          <ul>
+            <% @registration.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :student_id_card %>
+      <br>
+      <%= f.text_field :student_id_card %>
+    </div>
+    <div class="field">
+      <%= f.label :semester_no %>
+      <br>
+      <%= f.select :semester_no, Registration::SEMESTER_TYPES,
+                   prompt: 'Select a Semester' %>
+    </div>
+    <div class="field">
+      <div class="dynamic_subject">
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+
+<script type="text/javascript">
+    $(function () {
+        $("#registration_semester_no").change(function () {
+            user_id = $("#registration_student_id_card").val();
+            //console.log(user_id);
+            var url = '/semesters/' + $(this).val() + '/get_drop_down_options?user_id=' + user_id;
+            //$("#subject_name").removeOption(/./)
+            $.get(url, function (data) {
+                //$('#subject_name').addOption(data, false);
+                //            console.log(data);
+            });
+        });
+    });
+
+    <%= render :partial=>"shared/drop_down_options" %>
+</script>
