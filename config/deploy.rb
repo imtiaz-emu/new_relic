@@ -1,6 +1,10 @@
 require 'new_relic/recipes'
 # config valid only for Capistrano 3.1
 lock '3.1.0'
+require "bundler/capistrano"
+
+set :stages, %w(staging production)
+set :default_stage, "production"
 
 set :application, 'Demo_Project'
 set :repo_url, 'git@github.com:imtiaz-emu/new_relic.git'
