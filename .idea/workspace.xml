@@ -2,32 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="142835a3-1683-4f23-a956-65f8c9ddb3f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131009115722_remove_columns_from_registration.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131009115834_add_columns_to_registration.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131012105014_create_students.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131012105532_remove_studentidcard_from_registration.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20131012105649_add_studentid_to_registration.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/students/_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/students/edit.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/students/index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/students/index.json.jbuilder" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/students/new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/students/show.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/students/show.json.jbuilder" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/student.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/models/student_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/students.css.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/students.js.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/students.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/students_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/controllers/students_controller_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/students_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/helpers/students_helper_test.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Demo_Project.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="142835a3-1683-4f23-a956-65f8c9ddb3f7" time="1390374003553" ignored="false" />
+    <file path="/Dummy.txt" changelist="142835a3-1683-4f23-a956-65f8c9ddb3f7" time="1390374156340" ignored="false" />
     <file path="/subject.rb" changelist="142835a3-1683-4f23-a956-65f8c9ddb3f7" time="1382509320798" ignored="false" />
     <file path="/fragment.rb" changelist="142835a3-1683-4f23-a956-65f8c9ddb3f7" time="1382513645303" ignored="false" />
     <file path="/subjects_controller.rb" changelist="142835a3-1683-4f23-a956-65f8c9ddb3f7" time="1382508355593" ignored="false" />
@@ -102,7 +81,7 @@
       <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="63" selection-start="1246" selection-end="1246" vertical-scroll-proportion="1.0152284">
+            <state line="26" column="58" selection-start="824" selection-end="824" vertical-scroll-proportion="0.65989846">
               <folding />
             </state>
           </provider>
@@ -516,7 +495,11 @@
       <created>1390374009274</created>
       <updated>1390374009274</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="dilam first dhakka">
+      <created>1390374167631</created>
+      <updated>1390374167631</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -704,7 +687,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="63" selection-start="1246" selection-end="1246" vertical-scroll-proportion="1.0152284">
+        <state line="26" column="58" selection-start="824" selection-end="824" vertical-scroll-proportion="0.65989846">
           <folding />
         </state>
       </provider>
