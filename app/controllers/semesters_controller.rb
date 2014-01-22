@@ -68,19 +68,36 @@ class SemestersController < ApplicationController
     semester = Semester.find(params[:id])
     subject = semester.subjects
     #Use val to find records
-    @subject_options = subject.collect { |x| "#{x.subject_name}" }
+    @subject_options = subject.collect { |x| "#{x.id}" }
 
-    id_card = params[:user_id]
-    @previous_subjects = []
-    registration = Registration.find_all_by_semester_no(val)
-    @registration = registration
-    @registration.each do |element|
-      if element.student_id_card == id_card
-        @subject_options.delete(element.subject_name)
-        @previous_subjects.push(element.subject_name)
-      end
+    if params[:user_id] == ""
+      @previous_subjects = []
     end
 
+    unless params[:user_id] == ""
+      if (Student.find_by_name(params[:user_id]))
+        id_card = Student.find_by_name(params[:user_id]).id
+      else id_card = Student.find(params[:user_id]).id
+      end
+
+      @previous_subjects = []
+      registration = Registration.all
+      @registration = registration
+      @registration.each do |element|
+        if element.student_id == id_card
+          if element.semester_id == Semester.find(params[:id]).id
+            unless @previous_subjects.include?(element.subject_id)
+              @previous_subjects.push(element.subject_id)
+            end
+          end
+        end
+      end
+      @previous_subjects.each do |subject|
+        if @subject_options.include?(subject)
+          @subject_options.delete(subject)
+        end
+      end
+    end
   end
 
   private

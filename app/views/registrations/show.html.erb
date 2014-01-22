@@ -2,17 +2,20 @@
 
 <p>
   <strong>Student id card:</strong>
-  <%= @registration.student_id_card %>
+  <% student = Student.find_by_id(@registration.student_id) %>
+  <%= student.name %>
 </p>
 
 <p>
   <strong>Semester no:</strong>
-  <%= @registration.semester_no %>
+  <% semester = Semester.find_by_id(@registration.semester_id) %>
+  <%= semester.semester_no %>
 </p>
 
 <p>
   <strong>Subject name:</strong>
-  <%= @registration.subject_name %>
+  <% subject = Subject.find_by_id(@registration.subject_id) %>
+  <%= subject.subject_name %>
 </p>
 
 <%= link_to 'Edit', edit_registration_path(@registration) %> |

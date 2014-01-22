@@ -5,13 +5,13 @@ class Search < ActiveRecord::Base
 
   private
   def find_registers
-    registrations = Registration.order(:student_id_card)
+    registrations = Registration.order(:student_id)
     if student_card_number.present? and semester_number.present?
-      registrations = registrations = registrations.where(semester_no: semester_number, student_id_card: student_card_number )
+      registrations = registrations = registrations.where(semester_id: semester_number, student_id: student_card_number )
     elsif student_card_number.present?
-      registrations.where("student_id_card like ?", "%#{student_card_number}")
+      registrations.where("student_id like ?", "%#{student_card_number}")
     elsif semester_number.present?
-      registrations = registrations.where(semester_no: semester_number)
+      registrations = registrations.where(semester_id: semester_number)
     else
       registrations = nil
     end

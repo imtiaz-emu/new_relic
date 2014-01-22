@@ -7,7 +7,7 @@
     </div>
     <div class="field">
       <%= f.label :semester_number %><br />
-      <%= f.collection_select :semester_number, Semester.all, :id, :semester_no, :include_blank => true %>
+      <%= f.collection_select :semester_number, Semester.all, :id, :semester_no, :include_blank => "select a Semester" %>
     </div>
 
     <div class="actions"><%= f.submit "Submit" %></div>

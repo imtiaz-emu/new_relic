@@ -1,4 +1,6 @@
 DemoProject::Application.routes.draw do
+  resources :students
+
   resources :registrations
 
   resources :subjects

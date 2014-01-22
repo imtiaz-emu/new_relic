@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131008044800) do
+ActiveRecord::Schema.define(version: 20131012105649) do
 
   create_table "registrations", force: true do |t|
-    t.string   "student_id_card"
-    t.integer  "semester_no"
-    t.string   "subject_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "subject_id"
+    t.integer  "semester_id"
+    t.integer  "student_id"
   end
 
   create_table "searches", force: true do |t|
@@ -37,6 +37,12 @@ ActiveRecord::Schema.define(version: 20131008044800) do
   create_table "semesters_subjects", id: false, force: true do |t|
     t.integer "semester_id"
     t.integer "subject_id"
+  end
+
+  create_table "students", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "subjects", force: true do |t|

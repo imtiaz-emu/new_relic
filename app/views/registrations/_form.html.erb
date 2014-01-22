@@ -12,14 +12,14 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :student_id_card %>
+      <%= f.label :student_id %>
       <br>
-      <%= f.text_field :student_id_card %>
+      <%= f.text_field :student_id %>
     </div>
     <div class="field">
       <%= f.label :semester_no %>
       <br>
-      <%= f.select :semester_no, Registration::SEMESTER_TYPES,
+      <%= f.select :semester_id, Registration::SEMESTER_TYPES,
                    prompt: 'Select a Semester' %>
     </div>
     <div class="field">
@@ -34,8 +34,8 @@
 
 <script type="text/javascript">
     $(function () {
-        $("#registration_semester_no").change(function () {
-            user_id = $("#registration_student_id_card").val();
+        $("#registration_semester_id").change(function () {
+            user_id = $("#registration_student_id").val();
             //console.log(user_id);
             var url = '/semesters/' + $(this).val() + '/get_drop_down_options?user_id=' + user_id;
             //$("#subject_name").removeOption(/./)

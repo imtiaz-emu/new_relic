@@ -15,9 +15,18 @@
   <tbody>
   <% @registrations.each do |registration| %>
       <tr>
-        <td><%= registration.student_id_card %></td>
-        <td><%= registration.semester_no %></td>
-        <td><%= registration.subject_name %></td>
+        <% if registration.student_id != nil and registration.student_id != 0 %>
+            <% student =  Student.find(registration.student_id) %>
+            <td><%= student.name %></td>
+        <%end%>
+        <% if registration.semester_id != 0 %>
+            <% semester =  Semester.find(registration.semester_id) %>
+            <td><%= semester.semester_no %></td>
+        <%end%>
+        <% if registration.subject_id != 0 %>
+            <% subject = Subject.find(registration.subject_id) %>
+            <td><%= subject.subject_name %></td>
+        <%end%>
         <td><%= link_to 'Show', registration %></td>
         <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
         <td><%= link_to 'Destroy', registration, method: :delete, data: {confirm: 'Are you sure?'} %></td>

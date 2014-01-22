@@ -18,6 +18,7 @@
     </div>
 
     <div class="field">
+      <%= hidden_field_tag "subject[semester_ids][]", nil%>
       <% for semester in Semester.find(:all) %>
           <%= semester.semester_no %>
           <%= check_box_tag "subject[semester_ids][]", semester.id, @subject.semesters.include?(semester) %> <br>
